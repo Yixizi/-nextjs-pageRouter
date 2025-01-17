@@ -1,0 +1,124 @@
+@use '../../styles/variables.scss' as *;
+
+
+@mixin swiperBtn {
+    position: absolute;
+    top: 208px;
+    width: 37px;
+    height: 63px;
+    background-color: #000;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &>span {
+        display: inline-block;
+        width: 37px;
+        height: 63px;
+        // background: url("~assets/images/pointlist.png") no-repeat 0 9999px;
+        // background-position: 0px 0px;
+    }
+}
+
+.top-swiper {
+    height: $swiperHeight;
+    position: relative;
+
+
+}
+
+.content {
+    position: relative;
+
+    .carousel {
+        // width: $contentWidth;
+        margin: 0 -1000px;
+        // padding-left: 1000px;
+        box-sizing: border-box;
+
+        // box-sizing: border-box;
+
+
+        .swiper-item {
+            height: $swiperHeight;
+            position: relative;
+            width: $contentWidth;
+
+
+            .swiper-bg {
+                height: 100%;
+                width: 100%;
+                // padding: 0 -1000px;
+
+
+                background-position: center center;
+                background-size: 10px auto;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                // 层级
+                z-index: -1;
+            }
+
+            .image {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+.dots {
+
+    width: $contentWidth;
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+    .dot {
+        // box-sizing: content-box;
+        padding: 0 5px;
+        width: 25px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #ccc;
+
+    }
+
+    .active {
+        background-color: white;
+
+    }
+
+
+}
+
+
+.prev {
+    @include swiperBtn();
+    left: 20px;
+    top: 208px;
+
+    &>span {
+        background: url("../../assets/images/pointlist.png") no-repeat 0 9999px;
+        background-position: 0px 0px;
+    }
+}
+
+.next {
+    @include swiperBtn();
+    right: 20px;
+
+    &>span {
+        background: url("../../assets/images/pointlist.png") no-repeat 0 9999px;
+        background-position: -48px 0px;
+    }
+}

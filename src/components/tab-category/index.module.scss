@@ -1,0 +1,25 @@
+.tab-category {
+    position: relative;
+}
+
+// .gutter-row {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    .tip {
+        margin-top: 6px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+}
