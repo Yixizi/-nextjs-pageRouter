@@ -20,7 +20,10 @@ const Recommend: React.FC<RecommendProps> = memo((props) => {
 				{recommends.map((item) => {
 					return (
 						<Col key={item.id} span={12}>
-							<Link href={'/'} className={styles['recommend-item']}>
+							<Link
+								href={'/detail?id=' + item.id}
+								className={styles['recommend-item']}
+							>
 								<Image
 									alt="recommend"
 									className={styles.image}

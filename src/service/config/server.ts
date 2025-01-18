@@ -12,13 +12,13 @@ export default class ClassXRequset {
 
 		this.instance.interceptors.request.use(
 			(config: InternalAxiosRequestConfig) => {
-				console.log('请求拦截');
+				// console.log('请求拦截');
 				return config;
 			}
 		);
 
 		this.instance.interceptors.response.use((res: AxiosResponse) => {
-			console.log('相应拦截');
+			// console.log('相应拦截');
 			return res;
 		});
 	}

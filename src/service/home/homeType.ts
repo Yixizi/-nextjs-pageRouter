@@ -32,3 +32,30 @@ export interface XHomeInfo {
 	recommends?: XRecommend[];
 	digitalData?: any[];
 }
+
+export interface XProduct {
+	id: number;
+	name?: string;
+	type?: number;
+	minPrice?: number;
+	maxPrice?: number;
+	originalCost?: number;
+	couponLabelDesc?: string;
+	coverUrl?: string;
+}
+
+export interface XHotProduct {
+	id: number;
+	products?: XProduct;
+}
+
+export interface XHotProductV2 {
+	count?: number;
+	hasMore?: boolean;
+	hotProduct?: XHotProduct[];
+}
+
+export interface XAllProduct {
+	count?: number;
+	allProduct?: XProduct[];
+}
